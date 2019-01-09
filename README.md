@@ -3,7 +3,7 @@ An application which brings some life literally to your boring web application.
 
 Inspired by https://github.com/Auz/Bug
 
-Phase 1 - Prototype Creation
+Phase 1 - Prototype Creation - Alpha Version
 - refactoring from JavaScript to Typescript
 - using the "best" practises, Interfaces, Classes, Inheritance, naming 
 - using comments to describe Classes,
@@ -13,6 +13,12 @@ Phase 1 - Prototype Creation
 - the finished product can be used by using the Typescript files or compiling them into one JavaScript file.
 - I recommend to use free Visual Studio Code or free Visual Studio Community Edition which both are easy to work with TypeScript
 
-Phase 2 - Adding new, additional graphics and relevant behaviour and new fun entity behaviours, maybe using SVG images
+Phase 2 - Adding new additional graphics and relevant behaviour 
+- add new fun entity behaviours, maybe using SVG images
 
-Phase 3 - New Feature, Using ASP.NET Core + SignalR to move entities form one screen to another screen.
+Phase 3 - New Features
+- using ASP.NET Core + SignalR to move entities form one screen to another screen.
+
+Phase 4 - Refactoring for Beta
+
+Phase 5 - Release
