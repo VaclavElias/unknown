@@ -11,7 +11,6 @@ Phase 1 - Prototype Creation
 - creating a basic documentation in markdown format (md), how to use library, including how the animation sprite works
 - adding custom behaviours to the entities so any entity can do whatever is added to it e.g. flying, moving, .. 
 - the finished product can be used by using the Typescript files or compiling them into one JavaScript file.
-- the project will be published to Github eventually as Open Source
 - I recommend to use free Visual Studio Code or free Visual Studio Community Edition which both are easy to work with TypeScript
 
 Phase 2 - Adding new, additional graphics and relevant behaviour and new fun entity behaviours, maybe using SVG images
