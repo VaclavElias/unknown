@@ -4,7 +4,7 @@ An application which brings some life literally to your boring web application.
 Inspired by https://github.com/Auz/Bug
 
 Phase 1 - Prototype Creation
-- Refactoring from JavaScript to Typescript
+- refactoring from JavaScript to Typescript
 - using the "best" practises, Interfaces, Classes, Inheritance, naming 
 - using comments to describe Classes,
 - making a generic classes and using interfaces with easy to add different kind of entities in the future phases e.g. ants, ladybug, butterfly and also not living entities a car, robot, anything 
