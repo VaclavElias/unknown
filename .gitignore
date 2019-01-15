@@ -331,3 +331,6 @@ ASALocalRun/
 
 # Webpack generated sourcemaps
 *.js.map
+
+# Original Bug JavaScript library files
+src/original/*

@@ -1,4 +1,4 @@
-import * as Controller from "./EntityController";
+import * as Controller from "./EntityDispatch";
 import IEntity from "./IEntity";
 import Support from "./Support";
 import Errors from "./Errors";
@@ -11,7 +11,7 @@ if(!Support.canUseTransformApi()) {
 Polyfill.initialize();
 
 function EntityController(entity?: IEntity) {
-  return new Controller.EntityController(entity);
+  return new Controller.EntityDispatch(entity);
 }
 
 export { 
