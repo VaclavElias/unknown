@@ -1,6 +1,6 @@
 import * as MouseOver from './EnumMode';
 
-export default interface IDispatchOptions {
+export default interface IEntity {
   minDelay: number,
   maxDelay: number,
   minBugs: number,

@@ -13,7 +13,7 @@ Phase 1 - Prototype Creation - Alpha Version
 - the finished product can be used by using the Typescript files or compiling them into one JavaScript file.
 - I recommend to use free Visual Studio Code or free Visual Studio Community Edition which both are easy to work with TypeScript
 
-Phase 2 - Adding new additional graphics and relevant behaviour 
+Phase 2 - Adding additional graphics and relevant behaviour 
 - add new fun entity behaviours, maybe using SVG images
 
 Phase 3 - New Features

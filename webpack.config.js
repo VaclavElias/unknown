@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/main.ts',
+  entry: './src/bootstrap.ts',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -15,7 +16,8 @@ module.exports = {
     extensions: [ '.ts', '.js' ]
   },
   output: {
-    filename: 'unknown.js',
+    filename: 'app.js',
+    library: 'unknown',
     path: path.resolve(__dirname, 'dist')
   }
 };

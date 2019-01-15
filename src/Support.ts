@@ -1,44 +1,52 @@
+import Entity from "./Entity";
+
 export default abstract class Support {
-//   private static readonly TransformApi = {
-//     'Moz': function(s) {
-//         this.bug.style.MozTransform = s;
-//     },
-//     'webkit': function(s) {
-//         this.bug.style.webkitTransform = s;
-//     },
-//     'O': function(s) {
-//         this.bug.style.OTransform = s;
-//     },
-//     'ms': function(s) {
-//         this.bug.style.msTransform = s;
-//     },
-//     'Khtml': function(s) {
-//         this.bug.style.KhtmlTransform = s;
-//     },
-//     'w3c': function(s) {
-//         this.bug.style.transform = s;
-//     }
-// };
+  private static readonly TransformApi = {
+    Moz: function(entity: Entity, style: string) {
+      (entity.element.style as any).MozTransform = style;
+    },
+    
+    webkit: function(entity: Entity, style: string) {
+      (entity.element.style as any).webkitTransform = style;
+    },
 
-//   public static canUseTransformApi(): boolean {
-//     if ('transform' in document.documentElement.style) {
-//       this.transform = this.transforms.w3c;
-//   } else {
+    O: function(entity: Entity, style: string) {
+      (entity.element.style as any).OTransform = style;
+    },
 
-//       // feature detection for the other transforms:
-//       var vendors = ['Moz', 'webkit', 'O', 'ms', 'Khtml'],
-//           i = 0;
+    ms: function(entity: Entity, style: string) {
+      (entity.element.style as any).msTransform = style;
+    },
 
-//       for (i = 0; i < vendors.length; i++) {
-//           if (vendors[i] + 'Transform' in document.documentElement.style) {
-//               this.transform = this.transforms[vendors[i]];
-//               break;
-//           }
-//       }
-//   }
-// }
+    Khtml: function(entity: Entity, style: string) {
+      (entity.element.style as any).KhtmlTransform = style;
+    },
+
+    w3c: function(entity: Entity, style: string) {
+      entity.element.style.transform = style;
+    }
+  };
+
+  public static canUseTransformApi(): boolean {
+    return (this.getTransformApi() !== null);
+  }
 
   public static getTransformApi() {
+    if('transform' in document.documentElement.style) {
+      return this.TransformApi.w3c;
+    }
+    else {
+      // feature detection for the other transforms:
+      const vendors: string[] = ['Moz', 'webkit', 'O', 'ms', 'Khtml'];
+      const count: number = vendors.length;
 
+      for(let i = 0; i < count; i++) {
+        if(`${vendors[i]}Transform` in document.documentElement.style) {
+          return this.TransformApi[vendors[i]];
+        }
+      }
+    }
+
+    return null;
   }
 }

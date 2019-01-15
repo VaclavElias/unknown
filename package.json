@@ -2,10 +2,10 @@
   "name": "unknown",
   "version": "1.0.0",
   "description": "An application which brings some life literally to your boring web application.",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "build": "webpack --mode production --config webpack.config.js",
-    "dev": "webpack --mode development --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,15 +13,12 @@
     "url": "git+https://github.com/VaclavElias/unknown.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/VaclavElias/unknown/issues"
   },
   "homepage": "https://github.com/VaclavElias/unknown#readme",
   "devDependencies": {
-    "ts-loader": "^5.3.3",
-    "typescript": "^3.2.2",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "typescript": "^3.2.2"
   }
 }
